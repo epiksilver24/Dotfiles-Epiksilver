@@ -2,7 +2,7 @@
 
 Este repositorio contiene mis dotfiles para el gestor de ventanas BSPWM en Linux. Incluye configuraciones para el panel Polybar, el lanzador Rofi, el terminal Alacritty y algunos otros programas comunes.
 
-[![2023-04-13-23-38-00-screenshot.png](https://i.postimg.cc/0Q4yfc85/2023-04-13-23-38-00-screenshot.png)](https://postimg.cc/mzQ4Z3zK)
+[![2023-04-13-23-41.png](https://i.postimg.cc/59wtv5hJ/2023-04-13-23-41.png)](https://postimg.cc/JtzmCX7Y)
 
 [![2023-04-13-23-37-45-screenshot.png](https://i.postimg.cc/cLcYmyPs/2023-04-13-23-37-45-screenshot.png)](https://postimg.cc/nXCCF5H5)
 
