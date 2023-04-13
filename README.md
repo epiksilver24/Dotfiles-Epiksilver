@@ -8,7 +8,8 @@ Este repositorio contiene mis dotfiles para el gestor de ventanas BSPWM en Linux
     polybar: configuraciones para Polybar
     rofi: configuraciones para Rofi (un lanzador de aplicaciones)
     alacritty: configuraciones para Alacritty (un terminal rápido)
-    vim: configuraciones para Vim (un editor de texto)
+    neovim: configuraciones para Vim (un editor de texto)
+    ranger: configuraciones para (un file Manager)
 
 ## Requisitos
 
@@ -18,8 +19,12 @@ Estos dotfiles están diseñados para funcionar en una instalación de Linux con
  -   Rofi: Un lanzador de aplicaciones que puede ser utilizado con BSPWM. Sitio web de Rofi
  -   Alacritty: Un emulador de terminal rápido y moderno. Sitio web de Alacritty
  -   Vim: Un editor de texto. Sitio web de Vim
- -   etBrains Mono: Una fuente de programación diseñada para mejorar la legibilidad del código. [Sitio web de JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-
+ -   JetBrains Mono: Una fuente de programación diseñada para mejorar la legibilidad del código. [Sitio web de JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+ -   Iosevka: Una fuente de programación monoespaciada, diseñada para ser clara, nítida y fácil de leer. [Sitio web de Iosevka](https://typeof.net/Iosevka/)
+ -   Material Icons: Una fuente de iconos diseñada por Google. 
+      sudo pacman -S ttf-material-icons
+ -   Feather: Una fuente de iconos con un diseño limpio y ligero. [Sitio web de Featheri](https://feathericons.com/)
+ -   Icomoon: Una fuente de iconos y herramienta de generación de iconos personalizados. [Sitio web de Icomoon](https://icomoon.io/)
 
 
 ## Instalación
@@ -41,8 +46,9 @@ Copia los archivos de configuración en sus ubicaciones correspondientes:
     cp -r polybar/ ~/.config/
     cp -r rofi/ ~/.config/
     cp -r alacritty/ ~/.config/
-    cp -r zsh/ ~/.zsh/
-    cp -r vim/ ~/.vim/
+    cp -r vim/plugged/ ~/.vim/
+    cp -r nvim/ ~/.config/
+    cp -r ranger/ ~/.confg/
 ```
 
 Reinicia BSPWM y otros programas relevantes para cargar las nuevas configuraciones.
