@@ -8,8 +8,9 @@ Este repositorio contiene mis dotfiles para el gestor de ventanas BSPWM en Linux
     polybar: configuraciones para Polybar
     rofi: configuraciones para Rofi (un lanzador de aplicaciones)
     alacritty: configuraciones para Alacritty (un terminal rápido)
-    neovim: configuraciones para Vim (un editor de texto)
+    neovim: configuraciones para Neovim (un editor de texto)
     ranger: configuraciones para (un file Manager)
+    
 
 ## Requisitos
 
@@ -18,18 +19,21 @@ Estos dotfiles están diseñados para funcionar en una instalación de Linux con
  -   Polybar: Un panel altamente configurable para barra de tareas y otras notificaciones. Sitio web de Polybar
  -   Rofi: Un lanzador de aplicaciones que puede ser utilizado con BSPWM. Sitio web de Rofi
  -   Alacritty: Un emulador de terminal rápido y moderno. Sitio web de Alacritty
- -   Vim: Un editor de texto. Sitio web de Vim
+ -   Neoim: Un editor de texto. Sitio web de Vim
+ -   Nitrogen: Un programa para establecer el fondo de escritorio 
  -   JetBrains Mono: Una fuente de programación diseñada para mejorar la legibilidad del código. [Sitio web de JetBrains Mono](https://www.jetbrains.com/lp/mono/)
  -   Iosevka: Una fuente de programación monoespaciada, diseñada para ser clara, nítida y fácil de leer. [Sitio web de Iosevka](https://typeof.net/Iosevka/)
  -   Material Icons: Una fuente de iconos diseñada por Google. 
-      sudo pacman -S ttf-material-icons
  -   Feather: Una fuente de iconos con un diseño limpio y ligero. [Sitio web de Featheri](https://feathericons.com/)
  -   Icomoon: Una fuente de iconos y herramienta de generación de iconos personalizados. [Sitio web de Icomoon](https://icomoon.io/)
 
+```
+pacman -S polybar bspwm rofi alaritty neovim nitrogen ttf-material-icons 
+```
 
 ## Instalación
 
-    Clona este repositorio en tu máquina local:
+Clona este repositorio en tu máquina local:
 
   
 ```
