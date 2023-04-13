@@ -34,7 +34,6 @@ git clone https://github.com/tu-usuario/dotfiles-bspwm.git
 Copia los archivos de configuración en sus ubicaciones correspondientes:
 
 ```
-
     cd dotfiles-bspwm
     cp -r bspwm/ ~/.config/
     cp -r sxhkd/ ~/.config/
@@ -45,7 +44,7 @@ Copia los archivos de configuración en sus ubicaciones correspondientes:
     cp -r vim/ ~/.vim/
 ```
 
-    Reinicia BSPWM y otros programas relevantes para cargar las nuevas configuraciones.
+Reinicia BSPWM y otros programas relevantes para cargar las nuevas configuraciones.
 
 ## Créditos
 
