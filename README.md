@@ -8,7 +8,6 @@ Este repositorio contiene mis dotfiles para el gestor de ventanas BSPWM en Linux
     polybar: configuraciones para Polybar
     rofi: configuraciones para Rofi (un lanzador de aplicaciones)
     alacritty: configuraciones para Alacritty (un terminal rápido)
-    zsh: configuraciones para ZSH (una shell mejorada)
     vim: configuraciones para Vim (un editor de texto)
 
 ## Requisitos
@@ -18,7 +17,6 @@ Estos dotfiles están diseñados para funcionar en una instalación de Linux con
     Polybar: Un panel altamente configurable para barra de tareas y otras notificaciones. Sitio web de Polybar
     Rofi: Un lanzador de aplicaciones que puede ser utilizado con BSPWM. Sitio web de Rofi
     Alacritty: Un emulador de terminal rápido y moderno. Sitio web de Alacritty
-    ZSH: Una shell mejorada. Sitio web de ZSH
     Vim: Un editor de texto. Sitio web de Vim
 
 ## Instalación
@@ -27,7 +25,7 @@ Estos dotfiles están diseñados para funcionar en una instalación de Linux con
 
   
 ```
-git clone https://github.com/tu-usuario/dotfiles-bspwm.git
+https://github.com/epiksilver24/Dotfiles-Epiksilver.git
 ```
 
 
