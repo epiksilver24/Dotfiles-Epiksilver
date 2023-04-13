@@ -12,12 +12,15 @@ Este repositorio contiene mis dotfiles para el gestor de ventanas BSPWM en Linux
 
 ## Requisitos
 
-Estos dotfiles están diseñados para funcionar en una instalación de Linux con BSPWM. Además, es necesario tener instalados algunos programas adicionales para usar todas las características incluidas en el repositorio:
+Estos dotfiles están diseñados para funcionar en una instalación de Linux con BSPWM. Además, es necesario tener instalados algunos programas adicionales y fuentes para usar todas las características incluidas en el repositorio:
 
-    Polybar: Un panel altamente configurable para barra de tareas y otras notificaciones. Sitio web de Polybar
-    Rofi: Un lanzador de aplicaciones que puede ser utilizado con BSPWM. Sitio web de Rofi
-    Alacritty: Un emulador de terminal rápido y moderno. Sitio web de Alacritty
-    Vim: Un editor de texto. Sitio web de Vim
+ -   Polybar: Un panel altamente configurable para barra de tareas y otras notificaciones. Sitio web de Polybar
+ -   Rofi: Un lanzador de aplicaciones que puede ser utilizado con BSPWM. Sitio web de Rofi
+ -   Alacritty: Un emulador de terminal rápido y moderno. Sitio web de Alacritty
+ -   Vim: Un editor de texto. Sitio web de Vim
+ -   etBrains Mono: Una fuente de programación diseñada para mejorar la legibilidad del código. [Sitio web de JetBrains Mono](https://www.jetbrains.com/lp/mono/)
+
+
 
 ## Instalación
 
