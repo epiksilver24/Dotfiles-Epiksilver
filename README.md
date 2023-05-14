@@ -33,7 +33,7 @@ Estos dotfiles están diseñados para funcionar en una instalación de Linux con
  -   Icomoon: Una fuente de iconos y herramienta de generación de iconos personalizados. [Sitio web de Icomoon](https://icomoon.io/)
 
 ```
-pacman -S polybar bspwm rofi alaritty neovim nitrogen ttf-material-icons 
+pacman -S polybar bspwm rofi alaritty neovim nitrogen lxsession 
 ```
 
 ## Instalación
