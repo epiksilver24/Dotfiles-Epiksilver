@@ -1,0 +1,103 @@
+#! /bin/sh
+export _JAVA_AWT_WM_NONREPARENTING=1
+JAVA_FONTS=$HOME/.fonts
+lxpolkit &
+bspc monitor HDMI-1 -s DVI-D-1
+spotify-listener &
+disown
+.config/autostart/spotify.sh &
+pkill sxhkd
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+#bspc monitor HDMI2 -d 4 5 
+#bspc monitor eDP1 -d 1 2 3
+bspc config top_padding 0
+bspc subscribe node_state | while read -r node_id state; do
+    if [ "$state" = "fullscreen" ]; then
+        polybar-msg cmd hide
+    else
+        polybar-msg cmd show
+    fi
+done &
+
+
+I=1
+  M=$(bspc query -M | wc -l)
+  if [[ "$M" == 1 ]]; then
+    bspc monitor -d 1 2 3 4 5 6 7 8 9
+  elif [[ "$M" == 2 ]]; then
+     bspc monitor $(bspc query -M | awk NR==1) -d 1 2 3
+     bspc monitor $(bspc query -M | awk NR==2) -d 4 5 6    
+  elif [[ "$M" == 3 ]]; then
+     bspc monitor $(bspc query -M | awk NR==1) -d 1 2 3
+     bspc monitor $(bspc query -M | awk NR==2) -d 4 5 6 
+     bspc monitor $(bspc query -M | awk NR==3) -d 7 8 9
+  elif [[ "$M" == 4 ]]; then
+     bspc monitor $(bspc query -M | awk NR==1) -d 1 2 3
+     bspc monitor $(bspc query -M | awk NR==2) -d 4 5 6 
+     bspc monitor $(bspc query -M | awk NR==3) -d 7 8 
+     bspc monitor $(bspc query -M | awk NR==4) -d 9 0
+  elif [[ "$M" == 5 ]]; then
+     bspc monitor $(bspc query -M | awk NR==1) -d 1 2
+     bspc monitor $(bspc query -M | awk NR==2) -d 3 4
+     bspc monitor $(bspc query -M | awk NR==3) -d 5 6
+     bspc monitor $(bspc query -M | awk NR==4) -d 6 7
+     bspc monitor $(bspc query -M | awk NR==5) -d 8 9
+  else
+    for monitor in $(bspc query -M); do
+    bspc monitor $monitor \
+        -n "$I" \
+        -d $I/{a,b,c}
+     let I++
+     done
+  fi
+
+
+bash ~/.config/polybar/preview.sh
+nitrogen --restore &
+
+bspc config border_width         2
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+# Reiniciar Spotify cuando se cierre con Super + X
+bspc rule -a Spotify state=floating follow=on
+xdotool key --clearmodifiers <Super + w>
+
+## Fix java applications
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+
+## bloauqeo de pantalla
+
+xss-lock -- i3bloqueo -c 00000 &
+
+
+lid_close_command="xss-lock -- $HOME/.local/bin/i3bloqueo"
+acpi_listen | while read event; do
+  if [|${event} = "button/lid LID close" ]; then
+      $lid_close_command
+  fi
+done &
+# Asigna la tecla "Super + Tab" para alternar entre ventanas
+super + Tab
+    bspc node -f next.local
+
+
+## network manager
+nm-applet &
+
+
+bspc config focus_follows_pointer true
+
+
+
